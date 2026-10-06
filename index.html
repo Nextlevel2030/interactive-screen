@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>الشاشة التفاعلية — الشركة الوطنية للخدمات الزراعية</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="stage">
+
+  <!-- خلفية الفيديو المشتركة (شاشة البداية + القائمة الرئيسية) -->
+  <video id="bgVideo" src="assets/video/promo.mp4" autoplay muted loop playsinline preload="auto"></video>
+  <div id="bgPattern"></div>
+
+  <!-- الشريط العلوي -->
+  <header id="topbar">
+    <button class="nav-btn" id="backBtn" aria-label="رجوع">
+      <svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg><span>رجوع</span>
+    </button>
+    <img class="logo" src="assets/logo/agriserv-logowhite.svg" alt="AgriServ" data-go="home">
+    <button class="nav-btn" id="homeBtn" data-go="home" aria-label="الشاشة الرئيسية">
+      <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg><span>الرئيسية</span>
+    </button>
+  </header>
+
+  <main id="screens"></main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
