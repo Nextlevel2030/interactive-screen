@@ -36,29 +36,47 @@ const I = {
   megaphone: '<svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg>',
   users: '<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M22 20a7 7 0 0 0-4-6.3"/></svg>',
   monitor: '<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
-  sound: '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>',
-  mute: '<svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>',
   bird: '<svg viewBox="0 0 24 24"><path d="M16 7h.01"/><path d="M3.4 18H12a8 8 0 0 0 8-8V7a4 4 0 0 0-7.3-2.3L2 20"/><path d="M20 7l2 .5-2 .5"/></svg>',
   meat: '<svg viewBox="0 0 24 24"><path d="M15 4a6 6 0 0 1 5 7c-1 4-6 6-10 7-3 1-6-1-6-4 0-2 1-3 3-4l2-1c2-1 2-5 6-5z"/><circle cx="7" cy="17" r="1.5"/></svg>',
   apple: '<svg viewBox="0 0 24 24"><path d="M12 7c-2-2-7-2-7 4 0 5 3 10 7 9 4 1 7-4 7-9 0-6-5-6-7-4z"/><path d="M12 7c0-2 1-4 3-4"/></svg>',
   fire: '<svg viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-4 5-4 7-1-1-2-2-2-4-2 2-3 5-3 9 0 4 3 7 7 7z"/></svg>',
   wheat: '<svg viewBox="0 0 24 24"><path d="M12 22V8"/><path d="M12 8c-2 0-4-2-4-5 2 0 4 2 4 5zM12 8c2 0 4-2 4-5-2 0-4 2-4 5z"/><path d="M12 13c-2 0-4-2-4-4 2 0 4 2 4 4zM12 13c2 0 4-2 4-4-2 0-4 2-4 4z"/><path d="M12 18c-2 0-4-2-4-4 2 0 4 2 4 4zM12 18c2 0 4-2 4-4-2 0-4 2-4 4z"/></svg>',
   palm: '<svg viewBox="0 0 24 24"><path d="M12 22c0-6 0-10-1-13"/><path d="M11 9C9 5 5 5 3 7M11 9c2-4 6-4 8-2M11 9c-4 0-6 3-6 6M11 9c4 0 7 2 7 6"/><path d="M8 22h8"/></svg>',
+  steth: '<svg viewBox="0 0 24 24"><path d="M6 3v6a5 5 0 0 0 10 0V3"/><path d="M11 14v2a5 5 0 0 0 10 0v-2"/><circle cx="21" cy="12" r="2"/></svg>',
+  syringe: '<svg viewBox="0 0 24 24"><path d="M18 2l4 4M20 4l-9.5 9.5M15 5l4 4M7.5 12.5l4 4M14 6l-9 9v4h4l9-9"/><path d="M2 22l3-3"/></svg>',
+  calendar: '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg>',
+  box: '<svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>',
+  horse: '<svg viewBox="0 0 24 24"><path d="M5 21c0-5 2-8 5-10L8 6l4 2 3-4 2 3c2 1 3 3 3 5l-2 1-3-1-2 3v6"/><path d="M15 9h.01"/></svg>',
+  port: '<svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M8 20v-6h8v6"/></svg>',
+  flask: '<svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 15h10"/></svg>',
+  phone: '<svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>',
+  // شعارات منصات التواصل (تعبئة)
+  x: '<svg viewBox="0 0 24 24" class="solid"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.5z"/></svg>',
+  linkedin: '<svg viewBox="0 0 24 24" class="solid"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>',
+  youtube: '<svg viewBox="0 0 24 24" class="solid"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15V9l5.25 3z"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>',
 };
 
-/* ---------- المحتوى (من ملف العرض "الشاشة التفاعلية - معدلة") ---------- */
+/* ---------- المحتوى (من ملف العرض "الشاشة التفاعلية - نسخة S") ---------- */
 const CONTENT = {
   company: 'الشركة الوطنية للخدمات الزراعية',
-  tagline: 'خدمات زراعية موثوقة',
+  tagline: 'خدمات متكاملة لقطاع زراعي مستدام',
+
+  // شريط التواصل في شاشة البداية — المنصات: x / instagram / linkedin / youtube
+  contact: {
+    handle: 'agriserv_sa',
+    socials: ['x', 'linkedin', 'youtube'],
+    phone: '920020300',
+  },
 
   // الترتيب كما في الملف: يمين ← يسار، الصف الأول ثم الثاني
   home: [
-    { to: 'about',          title: 'عن الشركة', icon: 'about',    img: 'exhibition' },
-    { to: 'services-intro', title: 'خدماتنا',  icon: 'services', img: 'greenhouse' },
-    { to: 'competitions',   title: 'منافسات أسواق النفع العام والمسالخ', icon: 'market', img: 'market' },
-    { to: 'app',            title: 'تطبيق الخدمات الزراعية', icon: 'app', img: 'dates-man' },
-    { to: 'works',          title: 'أعمالنا',  icon: 'works',    img: 'horse-race' },
-    { to: 'numbers',        title: 'أرقامنا',  icon: 'numbers',  img: 'camels' },
+    { to: 'about',          title: 'عن الشركة', icon: 'about',    img: 'home/about' },
+    { to: 'services-intro', title: 'خدماتنا',  icon: 'services', img: 'home/services' },
+    { to: 'competitions',   title: 'منافسات أسواق النفع العام والمسالخ', icon: 'market', img: 'home/competitions' },
+    { to: 'app',            title: 'تطبيق الخدمات الزراعية', icon: 'app', img: 'home/app' },
+    { to: 'works',          title: 'أبرز مشاركاتنا', icon: 'works', img: 'home/works' },
+    { to: 'numbers',        title: 'الشركة في أرقام', icon: 'numbers', img: 'camels' },
   ],
 
   about: {
@@ -70,33 +88,40 @@ const CONTENT = {
   },
 
   servicesIntro: 'تقدم الشركة مجموعة من الخدمات الزراعية لتلبية احتياجات المستفيدين، إلى جانب تطوير خدمات ذات القيمة المضافة التي توفر حلولاً وخيارات تخدم القطاع الزراعي.',
+  // صورتان تتبدلان: القطاع النباتي والقطاع الحيواني
+  servicesIntroImgs: ['pages/services-plant', 'pages/services-animal'],
 
+  // 14 خدمة — more: صفحة تُفتح من زر "للمزيد" داخل نافذة الخدمة
   services: [
-    { title: 'خدمات المحاجر', img: 'inspection', more: 'quarantine',
-      desc: 'أذونات الاستيراد والتصدير والعبور للثروة النباتية والحيوانية والسمكية، وفسح الإرساليات من خلال المحاجر في المنافذ الجمركية، وإجراء الفحوصات والكشوفات المخبرية.' },
-    { title: 'الاستشارات والتسويق الزراعي', img: 'farm',
-      desc: 'العمل على تطوير نموذج العمل الحالي لخدمات الإرشاد الزراعي المقدمة للمزارعين والمشاريع الزراعية لتتحول إلى خدمات استشارية متكاملة من الإنتاج إلى التسويق.' },
-    { title: 'خدمات أسواق النفع العام', img: 'market2',
-      desc: 'تطوير البنية التحتية والنماذج التشغيلية لأسواق النفع العام المسندة للشركة من قبل وزارة البيئة والمياه والزراعة من خلال طرحها كمنافسات.' },
-    { title: 'خدمات المسالخ', img: 'sheep',
-      desc: 'تطوير البنية التحتية والنماذج التشغيلية للمسالخ المسندة للشركة من قبل وزارة البيئة والمياه والزراعة من خلال طرحها كمنافسات.' },
-    { title: 'خدمات العيادات والوقاية من الأمراض والآفات', img: 'vet-horse',
-      desc: 'تقديم العلاج والتحصين وخدمات البرامج الوقائية لملاك الإبل، والخيل، والماشية، والحيوانات الأليفة والفطرية من خلال العيادات البيطرية الثابتة والمتنقلة.' },
-    { title: 'خدمات إصدار التراخيص، التصاريح، الشهادات وتسجيل المدخلات الزراعية', img: 'seedlings',
-      desc: 'تشمل إصدار التراخيص والتصاريح والشهادات المتعلقة بالثروة النباتية والحيوانية والسمكية، وتراخيص المنشآت البيطرية وأسواق النفع العام ومزاولة المهن الزراعية والبيطرية وتسجيل المدخلات الزراعية.' },
+    { t: 'خدمات المحاجر', icon: 'shield',
+      d: 'أذونات الاستيراد والتصدير والعبور للثروة النباتية والحيوانية والسمكية، وفسح الإرساليات من خلال المحاجر في المنافذ الجمركية، وإجراء الفحوصات والكشوفات المخبرية.' },
+    { t: 'إصدار التراخيص، التصاريح، الشهادات وتسجيل المدخلات الزراعية', icon: 'doc',
+      d: 'تشمل إصدار التراخيص والتصاريح والشهادات المتعلقة بالثروة النباتية والحيوانية والسمكية، وتراخيص المنشآت البيطرية وأسواق النفع العام ومزاولة المهن الزراعية والبيطرية وتسجيل المدخلات الزراعية.' },
+    { t: 'العيادات البيطرية', icon: 'steth',
+      d: 'تقديم العلاج والتحصين وخدمات البرامج الوقائية لملاك الإبل، والخيل، والماشية، والحيوانات الأليفة والفطرية من خلال العيادات البيطرية الثابتة والمتنقلة والافتراضية.' },
+    { t: 'أسواق النفع العام والمسالخ', icon: 'market',
+      d: 'إدارة وتطوير أسواق النفع العام والمسالخ المسندة للشركة من قبل وزارة البيئة والمياه والزراعة من خلال طرحها كمنافسات.' },
+    { t: 'الاستشارات والتسويق الزراعي', icon: 'plant',
+      d: 'تقديم خدمة الاستشارات والتسويق الزراعي للمزارعين والمشاريع الزراعية لتتحول إلى خدمات استشارية متكاملة من الإنتاج إلى التسويق.' },
+    { t: 'خدمات المسار السريع', icon: 'bolt', more: 'fasttrack',
+      d: 'تسهل وتسرّع إتمام كافة الإجراءات المتعلقة بأذونات الاستيراد والتصدير والعبور للإرساليات الحيوانية والنباتية عبر المنافذ الحدودية والكشف الميداني لإصدار وتجديد التراخيص الزراعية.' },
+    { t: 'حجر طيور الزينة المستوردة', icon: 'bird',
+      d: 'خدمة لحجر الطيور الحيّة المستوردة للمنشأة التي لا تملك مركز بيع وتوزيع الطيور وذلك بهدف تطبيق الإجراءات المحجرية لمتابعة الحالة الصحية بعد الفسح المشروط خلال الأيام الثلاثة الأولى؛ بهدف التأكد من سلامة الطيور.' },
+    { t: 'أذونات المنتجات الغذائية', icon: 'apple',
+      d: 'تتيح للمستفيد التقدم بطلب الحصول على أذونات استيراد المنتجات الغذائية وذلك للتأكد من مطابقتها للمواصفات والاشتراطات الصحية والفنية المعتمدة قبل دخولها إلى المملكة.' },
+    { t: 'خدمات تحصين المواشي المستوردة', icon: 'syringe',
+      d: 'خدمة حجز موعد لتحصين المواشي المستوردة في منفذي الخمرة والحديثة.' },
+    { t: 'الخدمات المحجرية الخاصة', icon: 'port',
+      d: 'تشمل إنهاء إجراءات فسح الإرساليات الحيوانية والنباتية في المنافذ الجمركية التي لا تتوفر فيها الخدمات المحجرية.' },
+    { t: 'خدمات محجر الخيل الدولي', icon: 'horse',
+      d: 'خدمة إذن التصدير الدائم أو المؤقت تشمل زيارة ميدانية لسحب العينات وتحليلها في المختبر المرجعي الدولي لإصدار الإذن.' },
+    { t: 'الاستشارات الفنية لخدمات التسجيل', icon: 'flask',
+      d: 'خدمة إلكترونية لحجز موعد مع مستشارين مختصين في مجال تسجيل المدخلات الزراعية (مبيدات، أسمدة، بذور، أو محسنات التربة)، لتسهيل الحصول على شهادة التسجيل.' },
+    { t: 'خدمة حجز موعد الإجراء المحجري', icon: 'calendar',
+      d: 'تمكّن المستورد والمخلص الجمركي من حجز موعد مسبق للحصول على الخدمات المحجرية عند المنافذ.' },
+    { t: 'فسح السلع المقيدة', icon: 'box',
+      d: 'خدمة إلكترونية تتيح للمصدّرين تقديم طلب إصدار إذن فسح للسلع المقيّدة ومطابقة البيانات والمرفقات المطلوبة إلكترونياً.' },
   ],
-
-  quarantine: [
-    { t: 'حجر طيور الزينة المستوردة', d: 'خدمة لحجر الطيور الحيّة المستوردة للمنشأة التي لا تملك مركز بيع وتوزيع الطيور وذلك بهدف تطبيق الإجراءات المحجرية لمتابعة الحالة الصحية بعد الفسح المشروط خلال الأيام الثلاثة الأولى؛ بهدف التأكد من سلامة الطيور.' },
-    { t: 'خدمة حجز موعد الإجراء المحجري', d: 'تمكّن المستورد والمخلص الجمركي من حجز موعد مسبق للحصول على الخدمات المحجرية عند المنافذ.' },
-    { t: 'خدمات تحصين المواشي', d: 'خدمة حجز موعد لتحصين المواشي المستوردة في منفذي الخمرة والحديثة.' },
-    { t: 'أذونات المنتجات الغذائية', d: 'تتيح للمستفيد التقدم بطلب الحصول على أذونات استيراد المنتجات الغذائية وذلك للتأكد من مطابقتها للمواصفات والاشتراطات الصحية والفنية المعتمدة قبل دخولها إلى المملكة.' },
-    { t: 'الاستشارات الفنية لخدمات التسجيل', d: 'خدمة إلكترونية لحجز موعد مع مستشارين مختصين في مجال تسجيل المدخلات الزراعية (مبيدات، أسمدة، بذور، أو محسنات التربة)، لتسهيل الحصول على شهادة التسجيل.' },
-    { t: 'فسح السلع المقيدة', d: 'خدمة إلكترونية تتيح للمصدّرين تقديم طلب إصدار إذن فسح للسلع المقيّدة ومطابقة البيانات والمرفقات المطلوبة إلكترونياً.' },
-    { t: 'خدمات محجر الخيل الدولي', d: 'خدمة إذن التصدير الدائم أو المؤقت تشمل زيارة ميدانية لسحب العينات وتحليلها في المختبر المرجعي الدولي لإصدار الإذن.' },
-    { t: 'الخدمات المحجرية الخاصة', d: 'تشمل إنهاء إجراءات فسح الإرساليات الحيوانية والنباتية في المنافذ الجمركية التي لا تتوفر فيها الخدمات المحجرية.' },
-  ],
-  fastTrackIntro: 'تسهل وتسرّع إتمام كافة الإجراءات الحكومية وغير الحكومية المتعلقة بأذونات الاستيراد والتصدير والعبور للإرساليات الحيوانية والنباتية عبر المنافذ الحدودية والتراخيص للمشاريع الزراعية.',
 
   fastTrack: {
     licenses: {
@@ -115,7 +140,7 @@ const CONTENT = {
   competitions: {
     intro: 'تقوم الشركة بطرح مواقع أسواق النفع العام والمسالخ المسندة لها كمنافسات في منصة فرص وعلى موقع الشركة بهدف:',
     goals: [['تطوير البنية التحتية', 'build'], ['تطوير نماذج التشغيل', 'gear'], ['ضمان تقديم الخدمة بجودة مميزة', 'star']],
-    qrUrl: 'agriserv.sa/investment-opportunities',
+    stat: { n: 900, plus: true, label: 'منافسة طُرحت لأسواق النفع العام والمسالخ' },
   },
 
   platform: {
@@ -123,68 +148,108 @@ const CONTENT = {
     mgmt: ['إدارة المواقع', 'إدارة الوحدات', 'إدارة العقود'],
     cats: [['الطيور', 'bird'], ['اللحوم', 'meat'], ['الخضار والفواكه', 'apple'], ['المواشي', 'cow'],
            ['الحطب والفحم', 'fire'], ['الأسماك', 'fish'], ['الأعلاف', 'wheat'], ['التمور', 'palm']],
-    // ضع صورة الباركود الخاصة بالمنصة في هذا المسار
-    qr: 'assets/qr/markets-platform.png',
+    qr: 'assets/qr/markets-platform.jpg',
   },
 
   app: {
-    intro: 'منصة رقمية تربط العملاء بمقدمي الخدمات الزراعية وتتيح الوصول إلى الخدمات والاستفادة منها بسهولة.',
     slogan: 'موثوقية .. كفاءة .. جودة .. سرعة',
-    features: [
-      ['سهولة الوصول', 'إلى الخدمات الزراعية.', 'tap'],
-      ['خدمات متنوعة', 'تلبي احتياجات المستفيدين.', 'grid'],
-      ['مقدمو خدمة مؤهلون', 'لتقديم خدمات موثوقة.', 'shield'],
-      ['جودة خدمات', 'لتجربة أكثر كفاءة.', 'star'],
-    ],
-    qrUrl: 'agriserv.sa/app',
+    sub: 'تطبيق الخدمات الزراعية.. أقرب لك',
+    intro: 'منصة رقمية تتيح للعملاء الوصول إلى خدمات الشركة الوطنية للخدمات الزراعية والاستفادة منها، إلى جانب الربط بمقدمي الخدمات الزراعية للحصول على خدماتهم بسهولة.',
   },
 
+  // أبرز مشاركاتنا — الصور في assets/img/works/<id>/ (ext.jpg للبطاقة، 1.jpg 2.jpg ... للعرض)
+  // الفيديو في assets/video/works/<id>.mp4 يُعرض أولاً ثم تتبدل الصور
   works: [
-    { id: 'hajj',  title: 'أعمال موسم الحج', img: 'sheep' },
-    { id: 'camel', title: 'مهرجان الملك عبد العزيز للإبل', img: 'camel-sunset' },
-    { id: 'taif',  title: 'موسم سباقات الطائف', img: 'horse-race' },
-    { id: 'cup',   title: 'كأس السعودية', img: 'horse-quarantine' },
+    { id: 'hajj',  title: 'أعمال موسم الحج 1447 هـ', imgs: 4 },
+    { id: 'camel', title: 'مهرجان الملك عبد العزيز للإبل', imgs: 6 },
+    { id: 'taif',  title: 'موسم سباقات الطائف', imgs: 3 },
+    { id: 'cup',   title: 'كأس السعودية', imgs: 7 },
+    { id: 'rabwa', title: 'موسم التمور بالربوة', imgs: 13, stamp: '2026' },
   ],
 
-  // الفيديو: ضع ملف الفيديو بنفس الاسم في assets/video/works/ — وإن لم يوجد تُعرض الصور تلقائياً
+  // stats: n = الرقم كما يُكتب، u = الوحدة، t = الوصف، k = عنوان صغير فوق الرقم
   workDetails: {
     hajj: {
-      title: 'أعمال موسم الحج 1447 هـ',
-      video: 'assets/video/works/hajj.mp4', imgs: ['sheep', 'cows', 'inspection', 'market'],
-      text: 'تستقبل الشركة الوطنية للخدمات الزراعية إرساليات موسم الحج عبر 4 محاجر رئيسية ومحجرين مساندة لإنهاء الإجراءات المحجرية لفسح الإرساليات الواردة للمملكة.',
-      stats: [['الإرساليات الحيوانية', '+2 مليون رأسًا من الماشية'], ['الإرساليات النباتية', '+120 طنًا من الخضار والفواكه']],
+      sub: 'جاهزية تشغيلية وخدمات محجرية متكاملة لخدمة موسم الحج',
+      items: [
+        ['استقبال الإرساليات الحيوانية', 'استقبال وفسح الإرساليات عبر 4 محاجر رئيسية ومحجرين مساندين، لتلبية احتياجات السوق المحلي ومشروع المملكة للإفادة من الهدي والأضاحي.'],
+        ['الفحص والإجراءات المحجرية', 'تنفيذ إجراءات الكشف الظاهري والتشخيص والتحاليل المخبرية للإرساليات الحيوانية الواردة.'],
+        ['جاهزية الأسواق والمسالخ', 'متابعة تنفيذ الخطط التشغيلية لأسواق النفع العام والمسالخ، ورفع جاهزيتها خلال موسم الحج.'],
+      ],
+      stats: [
+        { k: 'الإرساليات الحيوانية · فسح', n: '+2', u: 'مليون', t: 'رأسًا من الماشية' },
+        { k: 'الإرساليات النباتية · فسح', n: '+120', u: 'طنًا', t: 'من الخضار والفواكه' },
+        { k: 'نفايات المسالخ', n: '+867', u: 'طنًا', t: 'عالجتها الشركة في العاصمة المقدسة بطريقة آمنة وفق الاشتراطات البيئية خلال موسم الحج' },
+      ],
     },
     camel: {
-      title: 'مهرجان الملك عبد العزيز للإبل 2025',
-      video: 'assets/video/works/camel.mp4', imgs: ['camel-sunset', 'camels'],
-      text: 'تشارك الشركة الوطنية للخدمات الزراعية في كل عام في مهرجان الملك عبد العزيز للإبل حيث تقوم باستكمال إجراءات الإبل المشاركة في المهرجان بعد التأكد من سلامتها.',
-      listTitle: 'كما توفر خدمات عبر تطبيق الخدمات الزراعية وتشمل:',
-      list: ['خدمات التحصين', 'الخدمات العيادية البيطرية', 'تسجيل وترقيم الإبل'],
+      sub: 'خدمات بيطرية متكاملة لصحة وسلامة الإبل المشاركة',
+      items: [
+        ['الإشراف والخدمات البيطرية', 'تقديم الخدمات البيطرية والإشراف على سلامة الإبل المشاركة، عبر عيادة الصياهد الثابتة والعيادات الميدانية المتنقلة.'],
+        ['الخدمات الرقمية', 'إتاحة تسجيل وترقيم الإبل، والخدمات العيادية البيطرية، والتحصين عبر تطبيق «الخدمات الزراعية»، إلى جانب حجز المواعيد إلكترونياً.'],
+        ['استكمال إجراءات المشاركة', 'استكمال إجراءات الإبل المشاركة في المهرجان بعد التحقق من سلامتها.'],
+      ],
+      stats: [
+        { n: '+30', u: 'يومًا', t: 'من خدمة الإبل المشاركة' },
+        { n: '+50', u: 'كادرًا وطنيًا', t: 'لتقديم الخدمات البيطرية والإشراف على الإبل' },
+        { n: '20', u: 'فرقة بيطرية', t: 'للعيادات الميدانية المتنقلة طوال المهرجان' },
+      ],
     },
     taif: {
-      title: 'موسم سباقات الطائف',
-      video: 'assets/video/works/taif.mp4', imgs: ['horse-race', 'vet-horse'],
-      text: 'تشارك الشركة الوطنية للخدمات الزراعية في موسم سباقات الطائف لتقديم خدمة الفحص الوقائي الذي يضمن سلامة الخيول المشاركة وإصدار أذونات التنقل إلكترونيّاً، ويأتي ذلك بهدف حماية الخيول المشاركة وتقيّدها بإجراءات الأمن الوقائي.',
+      sub: 'خدمات بيطرية وقائية لصحة وسلامة الخيل المشاركة',
+      items: [
+        ['الفحص الوقائي', 'إجراء الفحوصات الوقائية للخيل المشاركة، للتحقق من سلامتها والالتزام بإجراءات الأمن الوقائي.'],
+        ['أذونات التنقل', 'تقديم خدمات الفحص الوقائي اللازمة لإصدار أذونات تنقل الخيل إلكترونياً، بما يسهّل استكمال إجراءات مشاركتها في السباقات.'],
+      ],
     },
     cup: {
-      title: 'كأس السعودية',
-      video: 'assets/video/works/cup.mp4', imgs: ['horse-quarantine', 'monitoring', 'office', 'vet-horse'],
-      text: 'تشارك الشركة الوطنية للخدمات الزراعية في كأس السعودية بتقديم الخدمات المحجرية والإشراف المستمر على صحة وسلامة الخيل المشاركة والقادمة من خارج المملكة طوال فترة السباقات.',
-      more: 'يُعد المحجر الدولي للخيل بالجنادرية الوجهة الأولى لإتمام كافة الإجراءات المحجرية المتعلقة بالخيل في المملكة العربية السعودية. وتشمل خدمات المحجر إصدار شهادات تصدير الخيل، وأذونات استيراد وتصدير وعبور الخيل عبر أراضي المملكة، بالإضافة إلى الإشراف على الحجر المؤقت للخيل المشاركة في البطولات والمنافسات الدولية التي تُقام في المملكة.',
+      sub: 'خدمات محجرية وإشراف بيطري لصحة وسلامة الخيل المشاركة',
+      items: [
+        ['استقبال الخيل وإجراءات الفسح', 'استقبال الخيل القادمة من خارج المملكة عبر المنافذ البرية والجوية، واستكمال إجراءات الفسح وفق الاشتراطات البيطرية المعتمدة.'],
+        ['الإشراف البيطري خلال السباقات', 'إجراء الفحوصات الصحية للخيل المشاركة، وتطبيق إجراءات الأمن الحيوي طوال فترة السباقات.'],
+        ['إجراءات مغادرة الخيل', 'إعداد شهادات عودة الخيل وتسليمها للمُلّاك، ومرافقتها إلى المنافذ لاستكمال إجراءات المغادرة.'],
+      ],
+      sub2: 'محجر الخيل الدولي بالجنادرية .. الوجهة الأولى لخدمات الخيل في المملكة',
+      items2: [
+        ['خدمات متكاملة', 'إصدار شهادات تصدير الخيل وأذونات استيرادها وتصديرها وعبورها عبر أراضي المملكة.'],
+        ['الرقابة البيطرية والمتابعة', 'الإشراف على الحجر المؤقت للخيل المشاركة في البطولات الدولية، ومتابعة صحتها وسلامتها.'],
+        ['بنية تحتية مطورة', 'وحدة مخصصة لفصل عينات الدم، ومحطة لتحلية المياه، إضافة إلى الإسطبلات والمستودعات، ونظام لإدارة المخزون بهدف تنظيم العمليات ورفع كفاءة العمل.'],
+        ['مرافق التدريب والضيافة', 'ميادين تدريب متخصصة للخيل، وغرف ضيافة مجهزة لمرافقيها.'],
+      ],
+    },
+    rabwa: {
+      logo: 'assets/img/works/rabwa/logo.png',
+      sub: 'موسم متكامل يجمع بين المنتج المحلي ودعم المنتجين والمزارعين',
+      items: [
+        ['تنظيم الموسم', 'نظّمت الشركة الوطنية للخدمات الزراعية موسم التمور بالربوة السنوي، الذي يجمع المزارعين والعارضين المحليين لعرض وتسويق التمور السعودية ومنتجاتها.'],
+        ['دعم المنتجين وتسويق التمور', 'إتاحة منافذ لبيع التمور والمنتجات الزراعية والصناعات التحويلية، بما يعزّز حضور المنتج المحلي.'],
+        ['تجربة ثقافية وتراثية', 'تقديم فعاليات تراثية وثقافية وتجارب ضيافة وأنشطة تعليمية، بالتعاون مع الجهات ذات العلاقة.'],
+        ['المسؤولية المجتمعية', 'دعم الأسر المنتجة والتعاون مع جمعية «خيرات» للاستفادة من فائض التمور وإيصاله إلى المستحقين.'],
+      ],
     },
   },
 
-  // n = الرقم، unit = الوحدة بعد الرقم، plus = إظهار علامة +
+  // شعارات شريط المشاركات (تتحرك بشكل متواصل) — كل شعار ملف مستقل
+  partners: [
+    'assets/img/works/rabwa/logo.png',
+    ...Array.from({ length: 12 }, (_, k) => `assets/img/partners/${k + 1}.png`),
+  ],
+
+  // الشركة في أرقام — n = الرقم، unit = الوحدة بعد الرقم، plus = إظهار علامة +، stamp = ختم السنة
+  // الترتيب صفاً صفاً من اليمين كما في الملف
   numbers: [
-    { n: 280, plus: true, unit: '', label: 'خدمة مُطلقة حتى الآن', cls: 'big hl' },
+    { n: 280, plus: true, unit: '', label: 'خدمة مُطلقة حتى الآن' },
+    { n: 70, plus: true, unit: 'ألف', label: 'عميل في تطبيق الخدمات الزراعية', stamp: '2026' },
+    { n: 15, plus: true, unit: 'مليون', label: 'رأسًا من الماشية المستوردة تم تحصينها حتى الآن' },
+    { n: 550, plus: true, unit: 'ألف زائر', label: 'في موسم التمور بالربوة', stamp: '2026' },
     { n: 900, plus: true, unit: 'ألف', label: 'إذن مُصدر حتى الآن' },
+    { n: 30, plus: true, unit: 'ألف', label: 'خدمة تم تنفيذها عبر تطبيق الخدمات الزراعية', stamp: '2026' },
+    { n: 60, plus: true, unit: '', label: 'مذكرة تعاون' },
+    { n: 2500, plus: true, unit: 'طن', label: 'متوسط كمية المبيعات في موسم التمور بالربوة', stamp: '2026' },
     { n: 121, plus: true, unit: 'ألف', label: 'ترخيص مُصدر حتى الآن' },
-    { n: 15, plus: true, unit: 'مليون', label: 'رأسًا من الماشية المستوردة تم تحصينها حتى الآن', cls: 'big' },
-    { n: 2, plus: true, unit: 'مليون', label: 'رأسًا من الماشية تم فسحها خلال موسم حج 1447هـ' },
-    { n: 120, plus: true, unit: 'مليون', label: 'طنًا من الخضار والفواكه تم فسحها خلال موسم حج 1447هـ' },
-    { n: 900, plus: true, unit: '', label: 'منافسة طُرحت لأسواق النفع العام والمسالخ', cls: 'big hl' },
-    { n: 67, plus: false, unit: '', label: 'مذكرة تعاون' },
+    { n: 180, plus: true, unit: 'ألف', label: 'خدمة قُدّمت عبر العيادات الثابتة والمتنقلة' },
     { n: 9, plus: false, unit: '', label: 'شهادات آيزو' },
+    { n: 100, plus: true, unit: 'مشارك', label: 'في معرض التمور بالربوة', stamp: '2026' },
   ],
 };
 
@@ -192,17 +257,25 @@ const CONTENT = {
 const img = name => `assets/img/${name}.jpg`;
 const rise = (i, extra = '', style = '') => `class="rise ${extra}" style="--i:${i};${style}"`;
 const head = (eyebrow, title, i = 0) =>
-  `<div ${rise(i)}><div class="eyebrow">${eyebrow}</div><h2 class="title">${title}</h2></div>`;
-const goBtn = (to, label, cls = '') => `<button class="btn ${cls}" data-go="${to}">${label} ${I.arrow}</button>`;
+  `<div ${rise(i)}>${eyebrow ? `<div class="eyebrow">${eyebrow}</div>` : ''}<h2 class="title">${title}</h2></div>`;
+const goBtn = (to, label, cls = '') => `<button class="btn ${cls}" data-go="${to}"><span>${label}</span>${I.arrow}</button>`;
+// الرقم دائماً بعلامة + على يساره مثل: +120
+const num = s => `<bdi class="n" dir="ltr">${s}</bdi>`;
+const qrBox = (src, title) => `
+  <div class="qr-box glass"><img src="${src}" alt="">${title ? `<b>${title}</b>` : ''}</div>`;
+const stamp = y => `<span class="stamp">${y}</span>`;
 
 /* ---------- الشاشات ---------- */
 const SCREENS = {
-  start: { bg: 'video', topbar: false, html: () => `
-    <img class="start-logo rise" style="--i:0" src="assets/logo/agriserv-logo-vertical-white.svg" alt="">
-    <h1 ${rise(1)}>${CONTENT.company}</h1>
-    <div ${rise(2, 'tag')}>${CONTENT.tagline}</div>
-    <button ${rise(3, 'start-btn')} data-go="home">اكتشف المزيد عن الشركة ${I.arrow}</button>
-    <div class="hint">المس الشاشة للبدء</div>` },
+  start: { bg: 'video', topbar: false, html: () => { const c = CONTENT.contact; return `
+    <img class="start-logo rise" style="--i:0" src="assets/logo/agriserv-logowhite.svg" alt="${CONTENT.company}">
+    <div ${rise(1, 'tag')}>${CONTENT.tagline}</div>
+    <button ${rise(2, 'start-btn')} data-go="home"><span>اكتشف المزيد عن الشركة</span>${I.arrow}</button>
+    <div ${rise(4, 'contact')}>
+      <div class="c-item"><span class="socials">${c.socials.map(s => I[s]).join('')}</span><bdi dir="ltr">${c.handle}</bdi></div>
+      <span class="c-sep"></span>
+      <div class="c-item"><span class="c-ic">${I.phone}</span><span class="c-lbl">الرقم الموحد</span><bdi dir="ltr">${c.phone}</bdi></div>
+    </div>` } },
 
   home: { bg: 'video', html: () => `
     <div class="home-head">${head(CONTENT.tagline, CONTENT.company)}</div>
@@ -212,7 +285,7 @@ const SCREENS = {
           <div class="tile-img" style="background-image:url(${img(t.img)})"></div>
           <div class="tile-icon">${I[t.icon]}</div>
           <b>${t.title}</b>
-          <small>استعرض ${I.arrow}</small>
+          <small><span>استعرض</span>${I.arrow}</small>
         </button>`).join('')}
     </div>` },
 
@@ -223,13 +296,13 @@ const SCREENS = {
         <p ${rise(1, 'lead')}>${a.intro}</p>
         <div ${rise(2)}>
           <div class="eyebrow">مجالات عملنا</div>
-          <div class="fields">${a.fields.map(([f, ic]) => `<div class="field">${I[ic]}${f}</div>`).join('')}</div>
+          <div class="fields">${a.fields.map(([f, ic]) => `<div class="field">${I[ic]}<span>${f}</span></div>`).join('')}</div>
         </div>
       </div>
       <div class="about-cards">
-        <div ${rise(2, 'glass wide')}><h3>${I.eye}رؤيتنا</h3><p>${a.vision}</p></div>
-        <div ${rise(3, 'glass wide')}><h3>${I.target}رسالتنا</h3><p>${a.mission}</p></div>
-        <div ${rise(4, 'glass wide')}><h3>${I.heart}قيمنا</h3>
+        <div ${rise(2, 'glass')}><h3>${I.eye}<span>رؤيتنا</span></h3><p>${a.vision}</p></div>
+        <div ${rise(3, 'glass')}><h3>${I.target}<span>رسالتنا</span></h3><p>${a.mission}</p></div>
+        <div ${rise(4, 'glass')}><h3>${I.heart}<span>قيمنا</span></h3>
           <div class="chips">${a.values.map(v => `<span class="chip">${v}</span>`).join('')}</div></div>
       </div>
     </div>`; } },
@@ -241,45 +314,22 @@ const SCREENS = {
         <p ${rise(1, 'lead')}>${CONTENT.servicesIntro}</p>
         <div ${rise(2)}>${goBtn('services', 'اكتشف الخدمات')}</div>
       </div>
-      <div ${rise(1, 'photo', `background-image:url(${img('greenhouse')})`)}></div>
+      <div ${rise(1, 'photo slides')} data-slides="${CONTENT.servicesIntroImgs.map(img).join(',')}"></div>
     </div>` },
 
   services: { html: () => `
-    <div class="page-head">${head('المس الخدمة لعرض التفاصيل', 'خدماتنا')}</div>
-    <div class="cards">
+    <div class="page-head">${head('تعرّف على خدماتنا', 'خدماتنا')}</div>
+    <div class="svc-grid">
       ${CONTENT.services.map((s, i) => `
-        <div ${rise(i + 1, 'card')} data-flip>
-          <div class="face front">
-            <div class="tile-img" style="background-image:url(${img(s.img)})"></div>
-            <b>${s.title}</b>
-            <div class="tap">${I.tap} المس للتفاصيل</div>
-          </div>
-          <div class="face back">
-            <b>${s.title}</b>
-            <p>${s.desc}</p>
-            ${s.more ? `<button class="btn" data-go="${s.more}">استعرض الخدمات ${I.arrow}</button>` : ''}
-          </div>
-        </div>`).join('')}
+        <button ${rise(i + 1, 'svc glass' + (s.t.length > 40 ? ' long' : ''))} data-modal="${i}">
+          <span class="ic">${I[s.icon]}</span>
+          <b>${s.t}</b>
+          <span class="tap">${I.tap}<span>للمزيد</span></span>
+        </button>`).join('')}
     </div>` },
 
-  quarantine: { html: () => `
-    <div class="page-head">${head('المس الخدمة لعرض التفاصيل', 'خدمات المحاجر')}</div>
-    <div class="sub-grid">
-      ${CONTENT.quarantine.map((q, i) => `
-        <button ${rise(i + 1, 'sub glass')} data-modal="${i}">
-          <div class="num">${i + 1}</div>
-          <b>${q.t}</b>
-          <span class="tap">${I.tap} التفاصيل</span>
-        </button>`).join('')}
-    </div>
-    <button ${rise(9, 'fast glass')} data-go="fasttrack">
-      <span class="ic">${I.bolt}</span>
-      <div><b>خدمات المسار السريع</b><p>${CONTENT.fastTrackIntro}</p></div>
-      <span class="btn ghost">المزيد ${I.arrow}</span>
-    </button>` },
-
   fasttrack: { html: () => { const f = CONTENT.fastTrack; const list = items =>
-      `<div class="ft-list">${items.map(x => `<div class="ft-item">${I.check}${x}</div>`).join('')}</div>`; return `
+      `<div class="ft-list">${items.map(x => `<div class="ft-item">${I.check}<span>${x}</span></div>`).join('')}</div>`; return `
     <div class="page-head">${head('خدماتنا', 'خدمات المسار السريع')}</div>
     <div class="ft-cols">
       <div ${rise(1, 'ft-col glass')}><h3>${f.licenses.t}</h3><p>${f.licenses.d}</p>${list(f.licenses.items)}</div>
@@ -287,51 +337,50 @@ const SCREENS = {
     </div>`; } },
 
   competitions: { html: () => { const c = CONTENT.competitions; return `
-    <div class="split">
+    <div class="split" style="grid-template-columns:1.15fr 1fr">
       <div class="col">
-        ${head('الاستثمار', 'منافسات أسواق النفع العام والمسالخ')}
+        ${head('', 'منافسات أسواق النفع العام والمسالخ')}
         <p ${rise(1, 'lead')}>${c.intro}</p>
-        <div class="goals three">${c.goals.map(([g, ic], i) => `<div ${rise(i + 2, 'goal glass')}><span class="ic">${I[ic]}</span>${g}</div>`).join('')}</div>
-        <div ${rise(5)}>
-          <div class="qr-box glass" style="display:inline-flex">
-            <img src="assets/qr/competitions.png" alt="">
-            <div class="qr-text"><b>اطّلع على المنافسات المطروحة</b><span>${c.qrUrl}</span></div>
-          </div>
+        <div class="goals three">${c.goals.map(([g, ic], i) => `<div ${rise(i + 2, 'goal glass')}><span class="ic">${I[ic]}</span><span>${g}</span></div>`).join('')}</div>
+        <div ${rise(5, 'big-stat')}>
+          <b>${num((c.stat.plus ? '+' : '') + `<span data-count="${c.stat.n}">${c.stat.n}</span>`)}</b><span>${c.stat.label}</span>
         </div>
         <div ${rise(6)}>${goBtn('platform', 'تعرّف على منصة أسواق النفع العام')}</div>
       </div>
-      <div ${rise(2, 'photo', `background-image:url(${img('market')})`)}></div>
+      <div class="col center">
+        <div ${rise(2, 'mockup')}><img src="assets/img/pages/competitions-mockup.png" alt=""></div>
+        <div ${rise(4)}>${qrBox('assets/qr/competitions.png', 'اطّلع على المنافسات المطروحة')}</div>
+      </div>
     </div>`; } },
 
   platform: { html: () => { const p = CONTENT.platform; return `
-    <div class="split" style="grid-template-columns:1.2fr 1fr">
-      <div class="col" style="gap:26px">
-        ${head('منصة رقمية موحدة', 'منصة أسواق النفع العام')}
-        <p ${rise(1, 'lead', 'font-size:28px')}>${p.intro}</p>
+    <div class="split" style="grid-template-columns:1.15fr 1fr">
+      <div class="col">
+        ${head('', 'منصة أسواق النفع العام')}
+        <p ${rise(1, 'lead')}>${p.intro}</p>
         <div ${rise(2, 'mgmt')}>${p.mgmt.map(m => `<div class="glass">${m}</div>`).join('')}</div>
         <div ${rise(3)}><div class="eyebrow">في مختلف مدن المملكة وتشمل:</div>
-          <div class="cats">${p.cats.map(([c, ic]) => `<div class="cat glass">${I[ic]}${c}</div>`).join('')}</div></div>
-        <div ${rise(4, 'row')} data-qr-wrap>
-          <div class="qr-box glass"><img src="${p.qr}" alt="" data-qr>
-            <div class="qr-text"><b>للاطلاع على المنصة</b><span>امسح الرمز</span></div></div>
-        </div>
+          <div class="cats">${p.cats.map(([c, ic]) => `<div class="cat glass">${I[ic]}<span>${c}</span></div>`).join('')}</div></div>
       </div>
-      <div ${rise(2, 'photo', `background-image:url(${img('market3')})`)}></div>
+      <div class="col center">
+        <div ${rise(2, 'mockup')}><img src="assets/img/pages/platform-mockup.png" alt=""></div>
+        <div ${rise(4)} data-qr-wrap>${qrBox(p.qr, 'للاطلاع على المنصة').replace('<img ', '<img data-qr ')}</div>
+      </div>
     </div>`; } },
 
   app: { html: () => { const a = CONTENT.app; return `
     <div class="split">
-      <div class="col" style="gap:28px">
+      <div class="col">
         ${head(a.slogan, 'تطبيق الخدمات الزراعية')}
-        <p ${rise(1, 'lead')}>${a.intro}</p>
-        <div class="features">${a.features.map(([t, d, ic], i) => `
-          <div ${rise(i + 2, 'feature glass')}><span class="ic">${I[ic]}</span><div><b>${t}</b><span>${d}</span></div></div>`).join('')}</div>
-        <div ${rise(6, 'row', 'flex-wrap:nowrap')}>
-          <button class="choice glass" data-go="app-client"><span class="ic">${I.user}</span>اطلب خدمات زراعية متنوعة!</button>
-          <button class="choice glass" data-go="app-provider"><span class="ic">${I.briefcase}</span>قدّم خدماتك كمقدم خدمة في التطبيق!</button>
+        <div ${rise(1, 'subhead')}>${a.sub}</div>
+        <p ${rise(2, 'lead')}>${a.intro}</p>
+        <div ${rise(3)}><div class="eyebrow">حمّل التطبيق الآن</div>${qrBox('assets/qr/app.png')}</div>
+        <div ${rise(4, 'choices')}>
+          <button class="choice" data-go="app-client"><span class="ic">${I.user}</span><span>اطلب خدمات زراعية متنوعة</span></button>
+          <button class="choice" data-go="app-provider"><span class="ic">${I.briefcase}</span><span>قدّم خدماتك عبر التطبيق!</span></button>
         </div>
       </div>
-      <div ${rise(2, 'photo', `background-image:url(${img('dates-man')})`)}></div>
+      <div ${rise(2, 'mockup')}><img src="assets/img/pages/app-mockup.png" alt=""></div>
     </div>`; } },
 
   'app-client': { html: () => `
@@ -339,16 +388,14 @@ const SCREENS = {
       <div class="col">
         ${head('تطبيق الخدمات الزراعية', 'يقدم لك تطبيق الخدمات الزراعية:')}
         <div ${rise(1, 'stat-pair')}>
-          <div class="glass"><b>+170</b><span>خدمة</span></div>
-          <div class="glass"><b>+120</b><span>مقدم خدمة</span></div>
+          <div class="glass"><b>${num('+170')}</b><span>خدمة</span></div>
+          <div class="glass"><b>${num('+120')}</b><span>مقدم خدمة</span></div>
         </div>
-        <div ${rise(2, 'goal glass')}><span class="ic">${I.shield}</span>مقدمو خدمات مرخصون ومؤهلون</div>
+        <div ${rise(2, 'goal glass')}><span class="ic">${I.shield}</span><span>مقدمو خدمات مرخصون ومؤهلون</span></div>
         <div ${rise(3)}><div class="eyebrow">حمّل التطبيق الآن وتصفح الخدمات</div>
-          <div class="qr-box glass" style="display:inline-flex"><img src="assets/qr/app.png" alt="">
-            <div class="qr-text"><b>امسح الرمز للتحميل</b><span>${CONTENT.app.qrUrl}</span></div></div></div>
-        <div ${rise(4)}>${goBtn('app-provider', 'هل أنت مقدم خدمة؟', 'ghost')}</div>
+          <div class="row qr-row">${qrBox('assets/qr/app.png')}${goBtn('app-provider', 'هل أنت مقدم خدمة؟', 'ghost')}</div></div>
       </div>
-      <div ${rise(2, 'photo', `background-image:url(${img('vet-horse')})`)}></div>
+      <div ${rise(2, 'photo', `background-image:url(${img('pages/app-client')})`)}></div>
     </div>` },
 
   'app-provider': { html: () => `
@@ -356,54 +403,61 @@ const SCREENS = {
       <div class="col">
         ${head('تطبيق الخدمات الزراعية', 'سجّل كمقدم خدمة واستفد من:')}
         <div class="goals">
-          ${[['حملات تسويقية في التطبيق', 'megaphone'], ['الوصول لأكبر عدد من العملاء', 'users'], ['إدارة الخدمات إلكترونياً', 'monitor']]
-            .map(([t, ic], i) => `<div ${rise(i + 1, 'goal glass')}><span class="ic">${I[ic]}</span>${t}</div>`).join('')}
+          ${[['حملات تسويقية', 'megaphone'], ['الوصول لأكبر عدد من العملاء', 'users'], ['إدارة الخدمات إلكترونياً', 'monitor']]
+            .map(([t, ic], i) => `<div ${rise(i + 1, 'goal glass')}><span class="ic">${I[ic]}</span><span>${t}</span></div>`).join('')}
         </div>
         <div ${rise(4)}><div class="eyebrow">حمّل التطبيق وسجّل كمقدم خدمة الآن</div>
-          <div class="qr-box glass" style="display:inline-flex"><img src="assets/qr/app.png" alt="">
-            <div class="qr-text"><b>امسح الرمز للتسجيل</b><span>${CONTENT.app.qrUrl}</span></div></div></div>
-        <div ${rise(5)}>${goBtn('app-client', 'هل تبحث عن خدمة؟', 'ghost')}</div>
+          <div class="row qr-row">${qrBox('assets/qr/app.png')}${goBtn('app-client', 'هل تبحث عن خدمة؟', 'ghost')}</div></div>
       </div>
-      <div ${rise(2, 'photo', `background-image:url(${img('farm')})`)}></div>
+      <div ${rise(2, 'photo', `background-image:url(${img('pages/app-provider')})`)}></div>
     </div>` },
 
   works: { html: () => `
-    <div class="page-head">${head('مشاركاتنا', 'أعمالنا')}</div>
+    <div class="page-head">${head('أعمالنا', 'أبرز مشاركاتنا')}</div>
     <div class="works">
       ${CONTENT.works.map((w, i) => `
         <button ${rise(i + 1, 'tile')} data-go="work-${w.id}">
-          <div class="tile-img" style="background-image:url(${img(w.img)})"></div>
+          <div class="tile-img" style="background-image:url(${img(`works/${w.id}/ext`)})"></div>
           <div class="tile-icon">${I.works}</div>
-          <b>${w.title}</b><small>شاهد ${I.arrow}</small>
+          ${w.stamp ? stamp(w.stamp) : ''}
+          <b>${w.title}</b><small><span>اطّلع على الأعمال</span>${I.arrow}</small>
         </button>`).join('')}
     </div>
-    <div ${rise(5, 'marquee')}>
-      <div class="track">${[0, 50, 100, 0, 50, 100].map(y => `<div class="logo-row" style="background-position:0 ${y}%"></div>`).join('')}</div>
+    <div ${rise(6, 'marquee')}>
+      <div class="track">${[0, 1].map(() => CONTENT.partners.map(src => `<span class="logo"><img src="${src}" alt=""></span>`).join('')).join('')}</div>
     </div>` },
 
   numbers: { html: () => `
-    <div class="page-head">${head('أرقامنا', 'أرقام تعكس الجهود')}</div>
+    <div class="page-head">${head('الشركة في أرقام', 'أرقام تعكس الجهود')}</div>
     <div class="numbers">
       ${CONTENT.numbers.map((n, i) => `
-        <div ${rise(i + 1, 'number glass ' + (n.cls || ''))}>
-          <b><bdi dir="ltr">${n.plus ? '+' : ''}<span data-count="${n.n}">0</span></bdi>${n.unit ? `<span class="u">${n.unit}</span>` : ''}</b>
+        <div ${rise(i + 1, 'number glass')}>
+          ${n.stamp ? stamp(n.stamp) : ''}
+          <b>${num((n.plus ? '+' : '') + `<span data-count="${n.n}">0</span>`)}${n.unit ? `<span class="u">${n.unit}</span>` : ''}</b>
           <span>${n.label}</span>
         </div>`).join('')}
     </div>` },
 };
 
 // صفحات تفاصيل الأعمال
-for (const [id, w] of Object.entries(CONTENT.workDetails)) {
-  SCREENS['work-' + id] = { html: () => `
-    <div class="work-detail">
-      <div ${rise(0, 'media')} data-media="${w.video}" data-imgs="${w.imgs.join(',')}"></div>
+const itemsGrid = (items, cls = '') => `<div class="w-items ${cls}" style="--n:${items.length}">${items.map(([t, d]) =>
+  `<div class="w-item glass"><b>${t}</b><p>${d}</p></div>`).join('')}</div>`;
+for (const w of CONTENT.works) {
+  const d = CONTENT.workDetails[w.id];
+  const imgs = Array.from({ length: w.imgs }, (_, k) => img(`works/${w.id}/${k + 1}`));
+  SCREENS['work-' + w.id] = { html: () => `
+    <div class="work-detail ${d.items2 ? 'dense' : ''}">
+      <div ${rise(0, 'media')} data-media="assets/video/works/${w.id}.mp4" data-slides="${imgs.join(',')}"></div>
       <div class="col">
-        ${head('أعمالنا', w.title, 1)}
-        <p ${rise(2, 'lead')}>${w.text}</p>
-        ${w.stats ? `<div ${rise(3, 'work-stats')}>${w.stats.map(([s, v]) => `<div class="glass"><small>${s}</small><b>${v}</b></div>`).join('')}</div>` : ''}
-        ${w.list ? `<div ${rise(3)}><div class="eyebrow">${w.listTitle}</div>
-          <div class="ft-list">${w.list.map(x => `<div class="ft-item">${I.check}${x}</div>`).join('')}</div></div>` : ''}
-        ${w.more ? `<p ${rise(3, 'more-text')}>${w.more}</p>` : ''}
+        <div ${rise(1, 'w-head')}>
+          <div><div class="eyebrow">أبرز مشاركاتنا</div><h2 class="title">${w.title}${w.stamp ? stamp(w.stamp) : ''}</h2></div>
+          ${d.logo ? `<img class="w-logo" src="${d.logo}" alt="">` : ''}
+        </div>
+        <div ${rise(2, 'subhead')}>${d.sub}</div>
+        <div ${rise(3)}>${itemsGrid(d.items)}</div>
+        ${d.stats ? `<div ${rise(4, 'w-stats')}>${d.stats.map(s => `
+          <div class="w-stat">${s.k ? `<small>${s.k}</small>` : ''}<b>${num(s.n)}<span class="u">${s.u}</span></b><span>${s.t}</span></div>`).join('')}</div>` : ''}
+        ${d.items2 ? `<div ${rise(4, 'subhead')}>${d.sub2}</div><div ${rise(5)}>${itemsGrid(d.items2)}</div>` : ''}
       </div>
     </div>` };
 }
@@ -417,7 +471,6 @@ const bgVideo = document.getElementById('bgVideo');
 const backBtn = document.getElementById('backBtn');
 let current = null;
 let navStack = [];
-let mediaTimer = null;
 
 // تكبير المسرح ليملأ أي شاشة مع الحفاظ على النسبة
 function fit() {
@@ -433,6 +486,64 @@ for (const [id, s] of Object.entries(SCREENS)) {
   el.innerHTML = s.html();
   screensEl.appendChild(el);
 }
+
+/* ضبط الطرفين بالتطويل: تُملأ المسافة الزائدة في كل سطر بحرف التطويل (ـ) داخل الكلمات بدل توسيع الفراغات */
+const KASHIDA_SEL = '.lead, .about-cards p, .modal-card p, .ft-col > p, .w-item p';
+const KASHIDA_MAX = 14;                                  // أقصى عدد تطويلات في الكلمة الواحدة (للأسطر القصيرة)
+const DUAL_JOIN = 'بتثجحخسشصضطظعغفقكلمنهيئى';            // حروف تتصل بما بعدها
+const AR_LETTER = /[ء-غف-ي]/;
+const AR_MARK = /[ً-ٰٟ]/;
+// مواضع التطويل الممكنة في الكلمة (من آخرها لأولها)
+function kashidaSlots(w) {
+  const slots = [];
+  for (let i = 0; i < w.length; i++) {
+    if (!DUAL_JOIN.includes(w[i])) continue;
+    let j = i + 1;
+    while (AR_MARK.test(w[j] || '')) j++;
+    const next = w[j];
+    if (!next || !AR_LETTER.test(next) || next === 'ء') continue;
+    if (w[i] === 'ل' && 'اأإآ'.includes(next)) continue;  // لا نكسر لام الألف
+    slots.push(j);
+  }
+  return slots.reverse();
+}
+function justifyKashida(el) {
+  const raw = el.dataset.raw ?? (el.dataset.raw = el.textContent.trim().replace(/\s+/g, ' '));
+  el.classList.remove('kashida');
+  el.style.textAlign = 'right';                          // القياس بدون ضبط الطرفين
+  el.textContent = '';
+  const spans = raw.split(' ').map((w, i) => {
+    if (i) el.append(' ');
+    const s = document.createElement('span'); s.textContent = w; el.append(s); return s;
+  });
+  const probe = document.createElement('span'); probe.textContent = 'ـ'.repeat(20); el.append(probe);
+  const tw = probe.offsetWidth / 20; probe.remove();
+  const lines = []; let top = null;
+  for (const s of spans) { if (s.offsetTop !== top) { lines.push([]); top = s.offsetTop; } lines[lines.length - 1].push(s); }
+  const width = el.clientWidth;
+  if (lines.length < 2 || !tw) { el.style.textAlign = ''; return; }
+  const out = lines.map((line, li) => {
+    const words = line.map(s => ({ t: s.textContent, slots: kashidaSlots(s.textContent), ins: {}, n: 0 }));
+    if (li < lines.length - 1 && line.length > 1) {
+      const used = Math.max(...line.map(s => s.offsetLeft + s.offsetWidth)) - Math.min(...line.map(s => s.offsetLeft));
+      let left = Math.floor((width - used - 2) / tw);
+      const cap = Math.min(KASHIDA_MAX, Math.max(4, Math.ceil(left / words.length)));
+      // توزيع متساوٍ على كلمات السطر
+      while (left > 0) {
+        const ok = words.filter(w => w.slots.length && w.n < cap);
+        if (!ok.length) break;
+        const pick = left >= ok.length ? ok : Array.from({ length: left }, (_, k) => ok[Math.floor((k + 0.5) * ok.length / left)]);
+        for (const w of pick) { const at = w.slots[w.n % w.slots.length]; w.ins[at] = (w.ins[at] || 0) + 1; w.n++; left--; }
+      }
+    }
+    return words.map(w => [...w.t].map((c, i) => 'ـ'.repeat(w.ins[i] || 0) + c).join('')).join(' ');
+  });
+  el.style.textAlign = '';
+  el.textContent = '';
+  for (const t of out) { const l = document.createElement('span'); l.className = 'kl'; l.textContent = t; el.append(l); }
+  el.classList.add('kashida');
+}
+document.fonts.ready.then(() => document.querySelectorAll(KASHIDA_SEL).forEach(justifyKashida));
 
 // إخفاء صندوق الباركود إن لم تتوفر الصورة
 document.querySelectorAll('[data-qr]').forEach(q =>
@@ -460,42 +571,41 @@ function go(id, { push = true } = {}) {
   stage.classList.toggle('no-topbar', cfg.topbar === false);
   if (cfg.bg === 'video') bgVideo.play().catch(() => {}); else setTimeout(() => bgVideo.pause(), 800);
 
-  if (id === 'numbers') countUp(next);
+  if (next.querySelector('[data-count]')) countUp(next);
   const media = next.querySelector('[data-media]');
   if (media) startMedia(media);
+  else next.querySelectorAll('[data-slides]').forEach(slideshow);
 }
 
 function back() { go(current === 'home' ? 'start' : (navStack.pop() || 'home'), { push: false }); }
 
 function cleanup(el) {
   closeModal();
-  el.querySelectorAll('[data-flip].flipped').forEach(c => c.classList.remove('flipped'));
-  const media = el.querySelector('[data-media]');
-  if (media) { clearInterval(mediaTimer); setTimeout(() => (media.innerHTML = ''), 600); }
+  el.querySelectorAll('[data-slides]').forEach(box => {
+    clearInterval(box._timer);
+    setTimeout(() => (box.innerHTML = ''), 600);
+  });
 }
 
-/* فيديو صفحة العمل، أو عرض صور إن لم يوجد الفيديو */
+/* فيديو صفحة العمل ثم عرض الصور بعد انتهائه (أو مباشرة إن لم يوجد الفيديو) */
 function startMedia(box) {
+  clearInterval(box._timer);
   box.innerHTML = '';
   const v = document.createElement('video');
   v.src = box.dataset.media; v.playsInline = true; v.autoplay = true;
   v.addEventListener('error', () => slideshow(box), { once: true });
+  v.addEventListener('ended', () => slideshow(box), { once: true });
   v.addEventListener('loadeddata', () => {
-    const btn = document.createElement('button');
-    btn.className = 'sound';
-    const sync = () => (btn.innerHTML = v.muted ? I.mute : I.sound);
-    btn.onclick = e => { e.stopPropagation(); v.muted = !v.muted; sync(); };
-    v.play().catch(() => { v.muted = true; v.play(); }).finally(sync);
-    box.appendChild(btn);
+    v.play().catch(() => { v.muted = true; v.play(); });
   }, { once: true });
   box.appendChild(v);
 }
 function slideshow(box) {
-  box.innerHTML = box.dataset.imgs.split(',').map(n => `<div class="slide" style="background-image:url(${img(n)})"></div>`).join('');
+  clearInterval(box._timer);
+  box.innerHTML = box.dataset.slides.split(',').map(src => `<div class="slide" style="background-image:url(${src})"></div>`).join('');
   const slides = [...box.children]; let i = 0;
   slides[0].classList.add('on');
-  clearInterval(mediaTimer);
-  if (slides.length > 1) mediaTimer = setInterval(() => {
+  if (slides.length > 1) box._timer = setInterval(() => {
     slides[i].classList.remove('on'); i = (i + 1) % slides.length; slides[i].classList.add('on');
   }, 5000);
 }
@@ -517,30 +627,34 @@ function countUp(root) {
   }, 30);
 }
 
-/* نافذة تفاصيل خدمات المحاجر */
+/* نافذة تفاصيل الخدمة */
 const modal = document.createElement('div');
 modal.id = 'modal';
-modal.innerHTML = '<div class="modal-card glass"><div class="num"></div><h3></h3><p></p><button class="btn ghost" data-close>إغلاق</button></div>';
+modal.innerHTML = '<div class="modal-card glass"><span class="ic"></span><h3></h3><p></p><div class="modal-btns"></div></div>';
 stage.appendChild(modal);
 function openModal(i) {
-  const q = CONTENT.quarantine[i];
-  modal.querySelector('.num').textContent = +i + 1;
-  modal.querySelector('h3').textContent = q.t;
-  modal.querySelector('p').textContent = q.d;
+  const s = CONTENT.services[i];
+  modal.querySelector('.ic').innerHTML = I[s.icon];
+  modal.querySelector('h3').textContent = s.t;
+  const p = modal.querySelector('p');
+  delete p.dataset.raw; p.textContent = s.d; justifyKashida(p);
+  modal.querySelector('.modal-btns').innerHTML =
+    (s.more ? `<button class="btn" data-go="${s.more}"><span>للمزيد</span>${I.arrow}</button>` : '') +
+    '<button class="btn ghost" data-close><span>إغلاق</span></button>';
   modal.classList.add('show');
 }
 const closeModal = () => modal.classList.remove('show');
 
 /* حركة الضغط على كل الأزرار */
-const TOUCHABLE = 'button, [data-go], [data-flip], [data-modal]';
-const NO_MOTION = '.tile, .card, .sub, .choice, .fast, .goal, .cat, .feature';
+const TOUCHABLE = 'button, [data-go], [data-modal]';
+const NO_MOTION = '.tile, .svc, .choice, .goal, .cat';
 document.addEventListener('pointerdown', e => {
   const el = e.target.closest(TOUCHABLE);
   if (!el || el.matches(NO_MOTION)) return;
   el.classList.add('pressed');
   const release = () => { el.classList.remove('pressed'); removeEventListener('pointerup', release); removeEventListener('pointercancel', release); };
   addEventListener('pointerup', release); addEventListener('pointercancel', release);
-  if (el.matches('[data-flip], img')) return;           // البطاقات والشعار: حركة تصغير فقط
+  if (el.matches('img')) return;           // الشعار: حركة تصغير فقط
   if (getComputedStyle(el).position === 'static') el.style.position = 'relative';
   el.style.overflow = 'hidden';
   const r = el.getBoundingClientRect(), k = r.width / el.offsetWidth;   // تعويض تكبير المسرح
@@ -556,17 +670,15 @@ document.addEventListener('pointerdown', e => {
 let navLock = false;
 const goSoon = id => { if (navLock) return; navLock = true; setTimeout(() => { navLock = false; go(id); }, 200); };
 document.addEventListener('click', e => {
-  if (modal.classList.contains('show')) { if (!e.target.closest('.modal-card') || e.target.closest('[data-close]')) closeModal(); return; }
+  const goEl = e.target.closest('[data-go]');
+  if (modal.classList.contains('show')) {
+    if (goEl && modal.contains(goEl)) { closeModal(); goSoon(goEl.dataset.go); }
+    else if (!e.target.closest('.modal-card') || e.target.closest('[data-close]')) closeModal();
+    return;
+  }
   const m = e.target.closest('[data-modal]');
   if (m) { openModal(m.dataset.modal); return; }
-  const goEl = e.target.closest('[data-go]');
-  if (goEl) { goSoon(goEl.dataset.go); return; }
-  const card = e.target.closest('[data-flip]');
-  if (card) {
-    const was = card.classList.contains('flipped');
-    card.parentElement.querySelectorAll('[data-flip]').forEach(c => c.classList.remove('flipped'));
-    if (!was) card.classList.add('flipped');
-  }
+  if (goEl) goSoon(goEl.dataset.go);
 });
 backBtn.addEventListener('click', () => { if (!navLock) { navLock = true; setTimeout(() => { navLock = false; back(); }, 200); } });
 // لمس أي مكان في شاشة البداية يفتح القائمة
