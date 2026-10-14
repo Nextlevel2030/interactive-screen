@@ -49,12 +49,8 @@ const I = {
   horse: '<svg viewBox="0 0 24 24"><path d="M5 21c0-5 2-8 5-10L8 6l4 2 3-4 2 3c2 1 3 3 3 5l-2 1-3-1-2 3v6"/><path d="M15 9h.01"/></svg>',
   port: '<svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M8 20v-6h8v6"/></svg>',
   flask: '<svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 15h10"/></svg>',
+  at: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.9 7.9"/></svg>',
   phone: '<svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>',
-  // شعارات منصات التواصل (تعبئة)
-  x: '<svg viewBox="0 0 24 24" class="solid"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.5z"/></svg>',
-  linkedin: '<svg viewBox="0 0 24 24" class="solid"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>',
-  youtube: '<svg viewBox="0 0 24 24" class="solid"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.75 15V9l5.25 3z"/></svg>',
-  instagram: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>',
 };
 
 /* ---------- المحتوى (من ملف العرض "الشاشة التفاعلية - نسخة S") ---------- */
@@ -62,10 +58,10 @@ const CONTENT = {
   company: 'الشركة الوطنية للخدمات الزراعية',
   tagline: 'خدمات متكاملة لقطاع زراعي مستدام',
 
-  // شريط التواصل في شاشة البداية — المنصات: x / instagram / linkedin / youtube
+  // شريط التواصل في شاشة البداية
   contact: {
+    label: 'المنصات الرسمية',
     handle: 'agriserv_sa',
-    socials: ['x', 'linkedin', 'youtube'],
     phone: '920020300',
   },
 
@@ -125,12 +121,12 @@ const CONTENT = {
 
   fastTrack: {
     licenses: {
-      t: 'المسار السريع لخدمات الكشف الميداني للتراخيص',
+      t: 'الكشف الميداني للتراخيص',
       d: 'يُسهّل ويسرّع إنجاز إجراءات الكشف الميداني، لإصدار أو تجديد التراخيص الزراعية.',
       items: ['ترخيص الثروة الحيوانية', 'ترخيص الثروة السمكية', 'ترخيص الثروة النباتية', 'ترخيص الدواجن', 'ترخيص المنشآت البيطرية'],
     },
     permits: {
-      t: 'المسار السريع لإصدار الأذونات',
+      t: 'إصدار الأذونات',
       d: 'يُسهّل ويسرّع إصدار موافقات واعتمادات أذونات الإرساليات الحيوانية والنباتية عبر المنافذ الحدودية.',
       items: ['أذونات الصقور', 'أذونات تنقل الإبل', 'أذونات المواشي', 'أذونات النحل', 'أذونات الحيوانات الأليفة', 'أذونات بيض التفقيس/الصيصان',
               'المنتجات النباتية (زهور مقطوفة)', 'أذونات الخضار والفواكه', 'أذونات المخلفات الحيوانية', 'أذونات الطيور الحيّة', 'أذونات المستلزمات الطبية', 'أذونات الكائنات الفطرية'],
@@ -153,7 +149,6 @@ const CONTENT = {
 
   app: {
     slogan: 'موثوقية .. كفاءة .. جودة .. سرعة',
-    sub: 'تطبيق الخدمات الزراعية.. أقرب لك',
     intro: 'منصة رقمية تتيح للعملاء الوصول إلى خدمات الشركة الوطنية للخدمات الزراعية والاستفادة منها، إلى جانب الربط بمقدمي الخدمات الزراعية للحصول على خدماتهم بسهولة.',
   },
 
@@ -177,8 +172,8 @@ const CONTENT = {
         ['جاهزية الأسواق والمسالخ', 'متابعة تنفيذ الخطط التشغيلية لأسواق النفع العام والمسالخ، ورفع جاهزيتها خلال موسم الحج.'],
       ],
       stats: [
-        { k: 'الإرساليات الحيوانية · فسح', n: '+2', u: 'مليون', t: 'رأسًا من الماشية' },
-        { k: 'الإرساليات النباتية · فسح', n: '+120', u: 'طنًا', t: 'من الخضار والفواكه' },
+        { k: 'الإرساليات الحيوانية', pre: 'فسح', n: '+2', u: 'مليون', t: 'رأسًا من الماشية' },
+        { k: 'الإرساليات النباتية', pre: 'فسح', n: '+120', u: 'طنًا', t: 'من الخضار والفواكه' },
         { k: 'نفايات المسالخ', n: '+867', u: 'طنًا', t: 'عالجتها الشركة في العاصمة المقدسة بطريقة آمنة وفق الاشتراطات البيئية خلال موسم الحج' },
       ],
     },
@@ -259,8 +254,8 @@ const rise = (i, extra = '', style = '') => `class="rise ${extra}" style="--i:${
 const head = (eyebrow, title, i = 0) =>
   `<div ${rise(i)}>${eyebrow ? `<div class="eyebrow">${eyebrow}</div>` : ''}<h2 class="title">${title}</h2></div>`;
 const goBtn = (to, label, cls = '') => `<button class="btn ${cls}" data-go="${to}"><span>${label}</span>${I.arrow}</button>`;
-// الرقم دائماً بعلامة + على يساره مثل: +120
-const num = s => `<bdi class="n" dir="ltr">${s}</bdi>`;
+// علامة + تظهر على يمين الرقم (قبله في القراءة العربية) مثل: 30+ ؛ تُكتب في المحتوى "+30"
+const num = s => { const m = s.match(/^\+([\s\S]*)$/); return `<bdi class="n" dir="ltr">${m ? m[1] + '+' : s}</bdi>`; };
 const qrBox = (src, title) => `
   <div class="qr-box glass"><img src="${src}" alt="">${title ? `<b>${title}</b>` : ''}</div>`;
 const stamp = y => `<span class="stamp">${y}</span>`;
@@ -270,9 +265,9 @@ const SCREENS = {
   start: { bg: 'video', topbar: false, html: () => { const c = CONTENT.contact; return `
     <img class="start-logo rise" style="--i:0" src="assets/logo/agriserv-logowhite.svg" alt="${CONTENT.company}">
     <div ${rise(1, 'tag')}>${CONTENT.tagline}</div>
-    <button ${rise(2, 'start-btn')} data-go="home"><span>اكتشف المزيد عن الشركة</span>${I.arrow}</button>
+    <button ${rise(2, 'start-btn')} data-go="home"><span>اكتشف المزيد</span>${I.arrow}</button>
     <div ${rise(4, 'contact')}>
-      <div class="c-item"><span class="socials">${c.socials.map(s => I[s]).join('')}</span><bdi dir="ltr">${c.handle}</bdi></div>
+      <div class="c-item"><span class="c-ic">${I.at}</span><span class="c-lbl">${c.label}</span><bdi dir="ltr">${c.handle}</bdi></div>
       <span class="c-sep"></span>
       <div class="c-item"><span class="c-ic">${I.phone}</span><span class="c-lbl">الرقم الموحد</span><bdi dir="ltr">${c.phone}</bdi></div>
     </div>` } },
@@ -332,8 +327,8 @@ const SCREENS = {
       `<div class="ft-list">${items.map(x => `<div class="ft-item">${I.check}<span>${x}</span></div>`).join('')}</div>`; return `
     <div class="page-head">${head('خدماتنا', 'خدمات المسار السريع')}</div>
     <div class="ft-cols">
-      <div ${rise(1, 'ft-col glass')}><h3>${f.licenses.t}</h3><p>${f.licenses.d}</p>${list(f.licenses.items)}</div>
-      <div ${rise(2, 'ft-col glass two')}><h3>${f.permits.t}</h3><p>${f.permits.d}</p>${list(f.permits.items)}</div>
+      <div ${rise(1, 'ft-col glass')}><h3><span class="num">1</span><span>${f.licenses.t}</span></h3><p>${f.licenses.d}</p>${list(f.licenses.items)}</div>
+      <div ${rise(2, 'ft-col glass two')}><h3><span class="num">2</span><span>${f.permits.t}</span></h3><p>${f.permits.d}</p>${list(f.permits.items)}</div>
     </div>`; } },
 
   competitions: { html: () => { const c = CONTENT.competitions; return `
@@ -372,7 +367,6 @@ const SCREENS = {
     <div class="split">
       <div class="col">
         ${head(a.slogan, 'تطبيق الخدمات الزراعية')}
-        <div ${rise(1, 'subhead')}>${a.sub}</div>
         <p ${rise(2, 'lead')}>${a.intro}</p>
         <div ${rise(3)}><div class="eyebrow">حمّل التطبيق الآن</div>${qrBox('assets/qr/app.png')}</div>
         <div ${rise(4, 'choices')}>
@@ -450,13 +444,12 @@ for (const w of CONTENT.works) {
       <div ${rise(0, 'media')} data-media="assets/video/works/${w.id}.mp4" data-slides="${imgs.join(',')}"></div>
       <div class="col">
         <div ${rise(1, 'w-head')}>
-          <div><div class="eyebrow">أبرز مشاركاتنا</div><h2 class="title">${w.title}${w.stamp ? stamp(w.stamp) : ''}</h2></div>
-          ${d.logo ? `<img class="w-logo" src="${d.logo}" alt="">` : ''}
+          <div><div class="eyebrow">أبرز مشاركاتنا</div><h2 class="title">${w.title}</h2></div>
         </div>
         <div ${rise(2, 'subhead')}>${d.sub}</div>
         <div ${rise(3)}>${itemsGrid(d.items)}</div>
         ${d.stats ? `<div ${rise(4, 'w-stats')}>${d.stats.map(s => `
-          <div class="w-stat">${s.k ? `<small>${s.k}</small>` : ''}<b>${num(s.n)}<span class="u">${s.u}</span></b><span>${s.t}</span></div>`).join('')}</div>` : ''}
+          <div class="w-stat">${s.k ? `<small>${s.k}</small>` : ''}<b>${s.pre ? `<span class="pre">${s.pre}</span>` : ''}${num(s.n)}<span class="u">${s.u}</span></b><span>${s.t}</span></div>`).join('')}</div>` : ''}
         ${d.items2 ? `<div ${rise(4, 'subhead')}>${d.sub2}</div><div ${rise(5)}>${itemsGrid(d.items2)}</div>` : ''}
       </div>
     </div>` };
@@ -487,12 +480,13 @@ for (const [id, s] of Object.entries(SCREENS)) {
   screensEl.appendChild(el);
 }
 
-/* ضبط الطرفين بالتطويل: تُملأ المسافة الزائدة في كل سطر بحرف التطويل (ـ) داخل الكلمات بدل توسيع الفراغات */
+/* ضبط الطرفين بالتطويل: تُملأ المسافة الزائدة في كل سطر بحرف التطويل (ـ) داخل الكلمات، وما يتبقى يُوزّع على الفراغات */
 const KASHIDA_SEL = '.lead, .about-cards p, .modal-card p, .ft-col > p, .w-item p';
-const KASHIDA_MAX = 14;                                  // أقصى عدد تطويلات في الكلمة الواحدة (للأسطر القصيرة)
+const KASHIDA_PER_SLOT = 2;                              // أقصى تطويل في الوصلة الواحدة بين حرفين
+const KASHIDA_PER_WORD = 5;                              // أقصى تطويل في الكلمة الواحدة
 const DUAL_JOIN = 'بتثجحخسشصضطظعغفقكلمنهيئى';            // حروف تتصل بما بعدها
-const AR_LETTER = /[ء-غف-ي]/;
-const AR_MARK = /[ً-ٰٟ]/;
+const AR_LETTER = /[\u0621-\u063A\u0641-\u064A]/;
+const AR_MARK = /[\u064B-\u065F\u0670]/;
 // مواضع التطويل الممكنة في الكلمة (من آخرها لأولها)
 function kashidaSlots(w) {
   const slots = [];
@@ -510,37 +504,56 @@ function kashidaSlots(w) {
 function justifyKashida(el) {
   const raw = el.dataset.raw ?? (el.dataset.raw = el.textContent.trim().replace(/\s+/g, ' '));
   el.classList.remove('kashida');
-  el.style.textAlign = 'right';                          // القياس بدون ضبط الطرفين
   el.textContent = '';
-  const spans = raw.split(' ').map((w, i) => {
-    if (i) el.append(' ');
-    const s = document.createElement('span'); s.textContent = w; el.append(s); return s;
-  });
-  const probe = document.createElement('span'); probe.textContent = 'ـ'.repeat(20); el.append(probe);
-  const tw = probe.offsetWidth / 20; probe.remove();
-  const lines = []; let top = null;
-  for (const s of spans) { if (s.offsetTop !== top) { lines.push([]); top = s.offsetTop; } lines[lines.length - 1].push(s); }
-  const width = el.clientWidth;
-  if (lines.length < 2 || !tw) { el.style.textAlign = ''; return; }
-  const out = lines.map((line, li) => {
-    const words = line.map(s => ({ t: s.textContent, slots: kashidaSlots(s.textContent), ins: {}, n: 0 }));
+  // قياس عرض كل كلمة وعرض الفراغ وعرض حرف التطويل
+  const measure = t => { const m = document.createElement('span'); m.style.whiteSpace = 'pre'; m.textContent = t; el.append(m); const w = m.getBoundingClientRect().width; m.remove(); return w; };
+  const k = el.getBoundingClientRect().width / el.offsetWidth || 1;   // تعويض تكبير المسرح
+  const width = el.clientWidth - 2;
+  const tw = measure('\u0640'.repeat(20)) / 20 / k, sp = measure(' '.repeat(10)) / 10 / k;
+  const words = raw.split(' ').map(t => ({ t, w: measure(t) / k, slots: kashidaSlots(t) }));
+  if (!tw || !words.length) { el.textContent = raw; return; }
+  // تقسيم الأسطر: نختار نقاط الكسر التي تجعل الأسطر متقاربة الطول وقابلة للملء بالتطويل، ونتجنب كلمة وحيدة في سطر
+  const cap = w => Math.min(KASHIDA_PER_WORD, w.slots.length * KASHIDA_PER_SLOT) * tw;
+  const N = words.length, best = new Array(N + 1).fill(Infinity), from = new Array(N + 1).fill(0);
+  best[0] = 0;
+  for (let j = 1; j <= N; j++) {
+    let lw = -sp, fill = 0;
+    for (let i = j - 1; i >= 0; i--) {
+      lw += words[i].w + sp; fill += cap(words[i]);
+      if (lw > width && i < j - 1) break;
+      const n = j - i, last = j === N;
+      const slack = Math.max(0, width - lw);
+      const gap = Math.max(0, slack - fill) / Math.max(1, n - 1);        // ما يبقى بين الكلمات بعد التطويل
+      let cost = last ? 0 : (slack / width) ** 2 * 10 + (gap / sp) ** 2;
+      if (n === 1 && N > 1) cost += 400;                                   // كلمة وحيدة في سطر
+      if (best[i] + cost < best[j]) { best[j] = best[i] + cost; from[j] = i; }
+    }
+  }
+  const lines = [];
+  for (let j = N; j > 0; j = from[j]) lines.unshift(words.slice(from[j], j));
+  const lineW = l => l.reduce((a, w) => a + w.w, 0) + sp * (l.length - 1);
+  el.textContent = '';
+  lines.forEach((line, li) => {
+    const ins = line.map(() => ({}));
     if (li < lines.length - 1 && line.length > 1) {
-      const used = Math.max(...line.map(s => s.offsetLeft + s.offsetWidth)) - Math.min(...line.map(s => s.offsetLeft));
-      let left = Math.floor((width - used - 2) / tw);
-      const cap = Math.min(KASHIDA_MAX, Math.max(4, Math.ceil(left / words.length)));
-      // توزيع متساوٍ على كلمات السطر
-      while (left > 0) {
-        const ok = words.filter(w => w.slots.length && w.n < cap);
-        if (!ok.length) break;
-        const pick = left >= ok.length ? ok : Array.from({ length: left }, (_, k) => ok[Math.floor((k + 0.5) * ok.length / left)]);
-        for (const w of pick) { const at = w.slots[w.n % w.slots.length]; w.ins[at] = (w.ins[at] || 0) + 1; w.n++; left--; }
+      let left = Math.floor((width - lineW(line)) / tw);
+      const n = line.map(() => 0);
+      // توزيع دوري على الكلمات، وفي كل كلمة على وصلاتها بالتناوب
+      let moved = true;
+      while (left > 0 && moved) {
+        moved = false;
+        for (let i = 0; i < line.length && left > 0; i++) {
+          const w = line[i];
+          if (!w.slots.length || n[i] >= Math.min(KASHIDA_PER_WORD, w.slots.length * KASHIDA_PER_SLOT)) continue;
+          const at = w.slots[n[i] % w.slots.length];
+          ins[i][at] = (ins[i][at] || 0) + 1; n[i]++; left--; moved = true;
+        }
       }
     }
-    return words.map(w => [...w.t].map((c, i) => 'ـ'.repeat(w.ins[i] || 0) + c).join('')).join(' ');
+    const l = document.createElement('span'); l.className = 'kl';
+    l.textContent = line.map((w, i) => [...w.t].map((c, j) => '\u0640'.repeat(ins[i][j] || 0) + c).join('')).join(' ');
+    el.append(l);
   });
-  el.style.textAlign = '';
-  el.textContent = '';
-  for (const t of out) { const l = document.createElement('span'); l.className = 'kl'; l.textContent = t; el.append(l); }
   el.classList.add('kashida');
 }
 document.fonts.ready.then(() => document.querySelectorAll(KASHIDA_SEL).forEach(justifyKashida));

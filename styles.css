@@ -194,8 +194,7 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
   font-size: 30px; font-weight: 500; white-space: nowrap;
 }
 .c-item { display: flex; align-items: center; gap: 16px; }
-.c-item .socials { display: flex; gap: 14px; transform: none; }
-.c-item .socials svg, .c-ic svg { width: 34px; height: 34px; }
+.c-ic svg { width: 34px; height: 34px; }
 .c-item .c-ic { display: grid; transform: none; color: var(--green-3); }
 .c-item .c-lbl { color: var(--ink-3); font-weight: 400; }
 .c-item bdi { font-weight: 700; letter-spacing: .5px; }
@@ -276,7 +275,6 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
 .svc.long b { font-size: 22px; }
 .svc .tap { margin-top: auto; font-size: 23px; font-weight: 500; color: var(--green-3); display: flex; gap: 8px; align-items: center; }
 .svc .tap svg { width: 26px; height: 26px; }
-.svc-grid .svc:nth-child(-n+5) { background: linear-gradient(160deg, rgba(7,146,74,.4), rgba(45,142,139,.18)); }
 
 /* نافذة التفاصيل */
 #modal {
@@ -288,7 +286,7 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
 #modal.show { opacity: 1; visibility: visible; transition: opacity .35s; }
 .modal-card {
   width: 1040px; padding: 56px 64px; border-radius: 40px;
-  background: linear-gradient(150deg, rgba(24,54,95,.97), rgba(7,110,70,.97));
+  background: rgba(24,48,90,.97); border: 1px solid var(--line);
   display: flex; flex-direction: column; gap: 24px; align-items: flex-start;
   transform: translateY(30px) scale(.97); transition: transform .45s var(--ease);
 }
@@ -302,7 +300,9 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
 
 .ft-cols { display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; }
 .ft-col { padding: 32px 36px; }
-.ft-col h3 { font-size: 31px; line-height: 1.35; margin-bottom: 10px; color: var(--green-3); }
+.ft-col h3 { font-size: 34px; line-height: 1.35; margin-bottom: 12px; color: var(--green-3); display: flex; align-items: center; gap: 16px; }
+.num { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; flex: none; background: rgba(66,182,80,.2); color: var(--green-3); font-size: 28px; font-weight: 700; padding-bottom: 4px; }
+.ft-col h3 > span:not(.num) { transform: translateY(var(--sst-lift)); }
 .ft-col > p { font-size: 24px; line-height: 1.6; color: var(--ink-2); margin-bottom: 22px; }
 .ft-list { display: grid; gap: 12px; }
 .ft-col.two .ft-list { grid-template-columns: 1fr 1fr; }
@@ -325,7 +325,8 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
 .big-stat {
   display: flex; align-items: center; gap: 24px;
   padding: 18px 32px; border-radius: 28px;
-  background: linear-gradient(110deg, rgba(7,146,74,.6), rgba(45,142,139,.3)); border: 1px solid var(--line);
+  background: var(--glass); border: 1px solid var(--line);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
 }
 .big-stat b { font-size: 76px; font-weight: 700; line-height: 1.2; }
 .big-stat > span { font-size: 29px; font-weight: 500; line-height: 1.4; }
@@ -343,7 +344,7 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
   padding: 26px 30px; border-radius: 28px; text-align: right;
   display: flex; align-items: center; gap: 20px;
   font-size: 28px; font-weight: 700; line-height: 1.4;
-  background: linear-gradient(135deg, var(--green-dark), #0d7a45); border: 1px solid rgba(147,204,132,.35);
+  background: var(--green-dark); border: 1px solid rgba(147,204,132,.35);
   box-shadow: 0 16px 40px rgba(0,0,0,.25);
   transition: transform .2s;
 }
@@ -372,40 +373,42 @@ h2.title { font-size: 56px; font-weight: 700; line-height: 1.2; }
 @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ===== صفحات تفاصيل الأعمال ===== */
-.work-detail { display: grid; grid-template-columns: 760px 1fr; gap: 60px; height: 100%; align-items: center; }
+.work-detail { display: grid; grid-template-columns: 680px 1fr; gap: 56px; height: 100%; align-items: center; }
 .media { position: relative; height: 860px; border-radius: 36px; overflow: hidden; background: #000; box-shadow: 0 40px 80px rgba(0,0,0,.4); }
 .media video, .slides .slide, .media .slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .slide { background-size: cover; background-position: center; opacity: 0; transition: opacity 1.2s; }
 .slide.on { opacity: 1; animation: kenburns 7s linear forwards; }
 @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.1); } }
-.work-detail .col { gap: 24px; }
+.work-detail .col { gap: 18px; }
 .w-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
 .w-head .title { position: relative; display: inline-flex; align-items: center; gap: 22px; }
-.w-head .title .stamp { position: static; width: 84px; height: 84px; font-size: 23px; }
-.w-logo { height: 120px; background: #fff; border-radius: 22px; padding: 10px 14px; flex: none; }
-.w-items { display: grid; grid-template-columns: repeat(min(var(--n), 3), 1fr); gap: 18px; }
-.w-items[style*="--n:4"] { grid-template-columns: 1fr 1fr; }
-.w-item { padding: 24px 26px; border-radius: 24px; }
-.w-item b { display: block; font-size: 27px; color: var(--green-3); margin-bottom: 8px; line-height: 1.35; }
+/* بطاقات صفحة المشاركة: صفوف بعرض العمود — العنوان يميناً والنص بجانبه */
+.w-items { display: flex; flex-direction: column; gap: 14px; }
+.w-item { display: grid; grid-template-columns: 250px 1fr; gap: 26px; align-items: center; padding: 15px 26px; border-radius: 22px; }
+.w-item b { font-size: 26px; color: var(--green-3); line-height: 1.4; }
 .w-item p { font-size: 23px; line-height: 1.7; color: var(--ink-2); }
 .w-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .w-stat {
-  padding: 22px 24px; border-radius: 24px;
-  background: linear-gradient(150deg, rgba(7,146,74,.55), rgba(45,142,139,.3)); border: 1px solid var(--line);
+  padding: 18px 24px; border-radius: 24px;
+  background: var(--glass); border: 1px solid var(--line);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
 }
 .w-stat small { display: block; font-size: 21px; color: var(--green-3); margin-bottom: 4px; font-weight: 500; }
-.w-stat b { display: block; font-size: 52px; font-weight: 700; line-height: 1.2; }
+.w-stat b { display: block; font-size: 48px; font-weight: 700; line-height: 1.2; }
 .w-stat b .u { font-size: 28px; font-weight: 500; color: var(--green-3); margin-inline-start: 10px; }
-.w-stat > span { display: block; font-size: 21px; line-height: 1.55; color: var(--ink-2); margin-top: 4px; }
+.w-stat b .pre { font-size: 30px; font-weight: 500; color: var(--green-3); margin-inline-end: 12px; }
+.w-stat > span { display: block; font-size: 20px; line-height: 1.5; color: var(--ink-2); margin-top: 4px; }
 /* كأس السعودية: محتوى أكثر */
-.work-detail.dense { grid-template-columns: 640px 1fr; gap: 52px; }
+.work-detail.dense { grid-template-columns: 540px 1fr; gap: 48px; }
+.work-detail.dense .media { height: 820px; }
+.work-detail.dense .eyebrow { display: none; }
 .work-detail.dense .col { gap: 16px; }
-.work-detail.dense .title { font-size: 50px; }
+.work-detail.dense .title { font-size: 46px; }
 .work-detail.dense .subhead { font-size: 27px; }
-.work-detail.dense .w-items { grid-template-columns: repeat(var(--n), 1fr); gap: 14px; }
-.work-detail.dense .w-item { padding: 18px 20px; border-radius: 20px; }
+.work-detail.dense .w-items { gap: 10px; }
+.work-detail.dense .w-item { grid-template-columns: 300px 1fr; padding: 10px 24px; border-radius: 18px; }
 .work-detail.dense .w-item b { font-size: 23px; }
-.work-detail.dense .w-item p { font-size: 20px; line-height: 1.6; }
+.work-detail.dense .w-item p { font-size: 20.5px; line-height: 1.6; }
 
 /* ===== الشركة في أرقام ===== */
 .numbers { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 22px; height: 700px; }
