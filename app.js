@@ -49,7 +49,6 @@ const I = {
   horse: '<svg viewBox="0 0 24 24"><path d="M5 21c0-5 2-8 5-10L8 6l4 2 3-4 2 3c2 1 3 3 3 5l-2 1-3-1-2 3v6"/><path d="M15 9h.01"/></svg>',
   port: '<svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M4 20V10l8-6 8 6v10"/><path d="M8 20v-6h8v6"/></svg>',
   flask: '<svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 15h10"/></svg>',
-  at: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.9 7.9"/></svg>',
   phone: '<svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>',
 };
 
@@ -72,7 +71,7 @@ const CONTENT = {
     { to: 'competitions',   title: 'منافسات أسواق النفع العام والمسالخ', icon: 'market', img: 'home/competitions' },
     { to: 'app',            title: 'تطبيق الخدمات الزراعية', icon: 'app', img: 'home/app' },
     { to: 'works',          title: 'أبرز مشاركاتنا', icon: 'works', img: 'home/works' },
-    { to: 'numbers',        title: 'الشركة في أرقام', icon: 'numbers', img: 'camels' },
+    { to: 'numbers',        title: 'الشركة في أرقام', icon: 'numbers', img: 'home/numbers' },
   ],
 
   about: {
@@ -159,7 +158,7 @@ const CONTENT = {
     { id: 'camel', title: 'مهرجان الملك عبد العزيز للإبل', imgs: 6 },
     { id: 'taif',  title: 'موسم سباقات الطائف', imgs: 3 },
     { id: 'cup',   title: 'كأس السعودية', imgs: 7 },
-    { id: 'rabwa', title: 'موسم التمور بالربوة', imgs: 13, stamp: '2026' },
+    { id: 'rabwa', title: 'موسم التمور بالربوة', imgs: 13 },
   ],
 
   // stats: n = الرقم كما يُكتب، u = الوحدة، t = الوصف، k = عنوان صغير فوق الرقم
@@ -243,7 +242,7 @@ const CONTENT = {
     { n: 2500, plus: true, unit: 'طن', label: 'متوسط كمية المبيعات في موسم التمور بالربوة', stamp: '2026' },
     { n: 121, plus: true, unit: 'ألف', label: 'ترخيص مُصدر حتى الآن' },
     { n: 180, plus: true, unit: 'ألف', label: 'خدمة قُدّمت عبر العيادات الثابتة والمتنقلة' },
-    { n: 9, plus: false, unit: '', label: 'شهادات آيزو' },
+    { n: 9, plus: false, unit: '', label: 'شهادات آيزو', badge: 'assets/img/iso-stamp.svg' },   // ختم شعار الآيزو
     { n: 100, plus: true, unit: 'مشارك', label: 'في معرض التمور بالربوة', stamp: '2026' },
   ],
 };
@@ -267,9 +266,9 @@ const SCREENS = {
     <div ${rise(1, 'tag')}>${CONTENT.tagline}</div>
     <button ${rise(2, 'start-btn')} data-go="home"><span>اكتشف المزيد</span>${I.arrow}</button>
     <div ${rise(4, 'contact')}>
-      <div class="c-item"><span class="c-ic">${I.at}</span><span class="c-lbl">${c.label}</span><bdi dir="ltr">${c.handle}</bdi></div>
+      <div class="c-item"><img class="c-logo" src="assets/logo/agriserv-leaf-green.png" alt=""><span class="c-lbl">${c.label}</span><bdi dir="ltr">${c.handle}</bdi></div>
       <span class="c-sep"></span>
-      <div class="c-item"><span class="c-ic">${I.phone}</span><span class="c-lbl">الرقم الموحد</span><bdi dir="ltr">${c.phone}</bdi></div>
+      <div class="c-item"><span class="c-ic">${I.phone}</span><span class="c-lbl">الرقم الموحد</span><bdi class="ph" dir="ltr">${c.phone}</bdi></div>
     </div>` } },
 
   home: { bg: 'video', html: () => `
@@ -427,6 +426,7 @@ const SCREENS = {
       ${CONTENT.numbers.map((n, i) => `
         <div ${rise(i + 1, 'number glass')}>
           ${n.stamp ? stamp(n.stamp) : ''}
+          ${n.badge ? `<img class="badge" src="${n.badge}" alt="" onerror="this.remove()">` : ''}
           <b>${num((n.plus ? '+' : '') + `<span data-count="${n.n}">0</span>`)}${n.unit ? `<span class="u">${n.unit}</span>` : ''}</b>
           <span>${n.label}</span>
         </div>`).join('')}
